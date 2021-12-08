@@ -1,4 +1,4 @@
-package DayOne
+package Day1
 
 import org.scalatest.*
 import flatspec.*
@@ -27,13 +27,13 @@ class SonarSweepSpec extends AnyFlatSpec with should.Matchers {
   }
 
   it should "pass the official example" in {
-    val inputs = Source.fromResource("DayOne/PartOne_OfficialExample.txt").getLines.toList.map(_.toInt)
+    val inputs = Source.fromResource("Day1/PartOne_OfficialExample.txt").getLines.toList.map(_.toInt)
     val result = SonarSweep.countIncreases(inputs)
     result should be(7)
   }
 
   it should "pass the official list" in {
-    val inputs = Source.fromResource("DayOne/PartOne_OfficialInput.txt").getLines.toList.map(_.toInt)
+    val inputs = Source.fromResource("Day1/PartOne_OfficialInput.txt").getLines.toList.map(_.toInt)
     val result = SonarSweep.countIncreases(inputs)
     result should be(1167)
   }
@@ -51,13 +51,13 @@ class SonarSweepSpec extends AnyFlatSpec with should.Matchers {
   }
 
   it should "pass the official example" in {
-    val inputs = Source.fromResource("DayOne/PartTwo_OfficialExample.txt").getLines.toList.map(_.toInt)
+    val inputs = Source.fromResource("Day1/PartTwo_OfficialExample.txt").getLines.toList.map(_.toInt)
     val result = SonarSweep.countSumIncreases(inputs)
     result should be(5)
   }
 
   it should "pass the official list" in {
-    val inputs = Source.fromResource("DayOne/PartTwo_OfficialInput.txt").getLines.toList.map(_.toInt)
+    val inputs = Source.fromResource("Day1/PartTwo_OfficialInput.txt").getLines.toList.map(_.toInt)
     val result = SonarSweep.countSumIncreases(inputs)
     result should be(1130)
   }

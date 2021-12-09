@@ -1,4 +1,4 @@
-package Day3
+package Day03
 
 case class BitCounts(zeros: List[Int], ones: List[Int]) {
   // most popular bits

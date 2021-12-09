@@ -1,4 +1,4 @@
-package Day3
+package Day03
 
 import org.scalatest.*
 import org.scalatest.flatspec.*
@@ -27,25 +27,25 @@ class BinaryDiagnosticsSpec extends AnyFlatSpec with should.Matchers {
   }
 
   it should "pass the official example" in {
-    val inputs = Source.fromResource("Day3/OfficialExample.txt").getLines.toList.map(parseBits)
+    val inputs = Source.fromResource("Day03/OfficialExample.txt").getLines.toList.map(parseBits)
     val result = BinaryDiagnostics.partOne(inputs)
     result should be(198)
   }
 
   it should "pass the official input" in {
-    val inputs = Source.fromResource("Day3/OfficialInput.txt").getLines.toList.map(parseBits)
+    val inputs = Source.fromResource("Day03/OfficialInput.txt").getLines.toList.map(parseBits)
     val result = BinaryDiagnostics.partOne(inputs)
     result should be(4139586)
   }
 
   "partTwo" should "pass the offical example" in {
-    val inputs = Source.fromResource("Day3/OfficialExample.txt").getLines.toList.map(parseBits)
+    val inputs = Source.fromResource("Day03/OfficialExample.txt").getLines.toList.map(parseBits)
     val result = BinaryDiagnostics.partTwo(inputs)
     result should be(230)
   }
 
   it should "pass the official input" in {
-    val inputs = Source.fromResource("Day3/OfficialInput.txt").getLines.toList.map(parseBits)
+    val inputs = Source.fromResource("Day03/OfficialInput.txt").getLines.toList.map(parseBits)
     val result = BinaryDiagnostics.partTwo(inputs)
     result should be(1800151)
   }

@@ -1,4 +1,4 @@
-package Day1
+package Day01
 
 object SonarSweep extends App {
 

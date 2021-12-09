@@ -1,4 +1,4 @@
-package Day3
+package Day03
 
 enum Bit(val bit: Int):
   case `0` extends Bit(0)

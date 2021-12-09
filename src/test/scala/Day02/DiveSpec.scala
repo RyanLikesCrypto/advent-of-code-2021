@@ -1,4 +1,4 @@
-package Day2
+package Day02
 
 import org.scalatest.*
 import org.scalatest.flatspec.*
@@ -43,13 +43,13 @@ class DiveSpec extends AnyFlatSpec with should.Matchers {
   }
 
   it should "pass the official example" in {
-    val inputs = Source.fromResource("Day2/OfficialExample.txt").getLines.toList.map(parseVector)
+    val inputs = Source.fromResource("Day02/OfficialExample.txt").getLines.toList.map(parseVector)
     val result = Dive.dive(inputs)
     result should be(150)
   }
 
   it should "pass the official list" in {
-    val inputs = Source.fromResource("Day2/OfficialInput.txt").getLines.toList.map(parseVector)
+    val inputs = Source.fromResource("Day02/OfficialInput.txt").getLines.toList.map(parseVector)
     val result = Dive.dive(inputs)
     result should be(2019945)
   }
@@ -67,13 +67,13 @@ class DiveSpec extends AnyFlatSpec with should.Matchers {
   }
 
   it should "pass the official example" in {
-    val inputs = Source.fromResource("Day2/OfficialExample.txt").getLines.toList.map(parseVector)
+    val inputs = Source.fromResource("Day02/OfficialExample.txt").getLines.toList.map(parseVector)
     val result = Dive.diveWithAim(inputs)
     result should be(900)
   }
 
   it should "pass the official input" in {
-    val inputs = Source.fromResource("Day2/OfficialInput.txt").getLines.toList.map(parseVector)
+    val inputs = Source.fromResource("Day02/OfficialInput.txt").getLines.toList.map(parseVector)
     val result = Dive.diveWithAim(inputs)
     result should be(1599311480)
   }

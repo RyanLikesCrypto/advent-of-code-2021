@@ -3,12 +3,14 @@ package Day3
 case class BitCounts(zeros: List[Int], ones: List[Int]) {
   // most popular bits
   def gamma(): List[Bit] = zeros.zip(ones).map((zeroCount: Int, oneCount: Int) => {
-    if (zeroCount > oneCount) Bit.`0`
+    if (zeroCount == oneCount) Bit.`1`
+    else if (zeroCount > oneCount) Bit.`0`
     else Bit.`1`
   })
   // least popular bits
   def epsilon(): List[Bit] = zeros.zip(ones).map((zeroCount: Int, oneCount: Int) => {
-    if (zeroCount == 0) Bit.`1`
+    if (zeroCount == oneCount) Bit.`0`
+    else if (zeroCount == 0) Bit.`1`
     else if (oneCount == 0) Bit.`0`
     else if (zeroCount < oneCount) Bit.`0`
     else Bit.`1`

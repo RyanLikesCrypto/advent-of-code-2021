@@ -38,6 +38,18 @@ class BinaryDiagnosticsSpec extends AnyFlatSpec with should.Matchers {
     result should be(4139586)
   }
 
+  "partTwo" should "pass the offical example" in {
+    val inputs = Source.fromResource("Day3/OfficialExample.txt").getLines.toList.map(parseBits)
+    val result = BinaryDiagnostics.partTwo(inputs)
+    result should be(230)
+  }
+
+  it should "pass the official input" in {
+    val inputs = Source.fromResource("Day3/OfficialInput.txt").getLines.toList.map(parseBits)
+    val result = BinaryDiagnostics.partTwo(inputs)
+    result should be(1800151)
+  }
+
   def convert(rawInputs: List[List[Int]]): List[List[Bit]] = rawInputs.map(_.map(_.toString).map(Bit.valueOf))
   def parseBits(rawBits: String): List[Bit] = rawBits.map(_.toString).map(Bit.valueOf).toList
 

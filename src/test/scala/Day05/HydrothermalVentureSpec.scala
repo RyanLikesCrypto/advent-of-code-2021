@@ -20,6 +20,18 @@ class HydrothermalVentureSpec extends AnyFlatSpec with should.Matchers {
     result should be(4728)
   }
 
+  "partTwo" should "pass the official example" in {
+    val lineSegments: List[LineSegment] = Source.fromResource("Day05/example.txt").getLines.toList.map(parseInput)
+    val result = HydrothermalVenture.partTwo(lineSegments)
+    result should be(12)
+  }
+
+  it should "pass the official input" in {
+    val lineSegments: List[LineSegment] = Source.fromResource("Day05/input.txt").getLines.toList.map(parseInput)
+    val result = HydrothermalVenture.partTwo(lineSegments)
+    result should be(17717)
+  }
+
   def parseInput(line: String): LineSegment = {
     val linePoints = line.split(" -> ")
       .map(point => point.split(","))
